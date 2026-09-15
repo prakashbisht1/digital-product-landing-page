@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Download the Smart Money Path Monthly Finance Tracker and Bi-Weekly Savings Challenge.">
+<meta name="theme-color" content="#4667e8">
+<title>Monthly Finance Tracker | Smart Money Path</title>
+<style>
+:root{
+  --ink:#18213a;--muted:#63708a;--line:#e7eaf2;--brand:#4667e8;
+  --dark:#3452cc;--soft:#f3f6ff;--mint:#e6faf5;
+  --shadow:0 15px 35px rgba(27,43,93,.09);--radius:22px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+header{padding:18px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.045em}
+.logo-mark{display:grid;place-items:center;width:35px;height:35px;border-radius:11px;background:var(--ink);color:#fff}
+.button{
+  display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:52px;
+  padding:0 22px;border:1px solid transparent;border-radius:13px;background:var(--brand);
+  color:#fff;font-weight:800;box-shadow:0 8px 18px rgba(70,103,232,.22);
+  cursor:pointer;transition:.2s
+}
+.button:hover{transform:translateY(-2px);background:var(--dark)}
+.ghost{background:#fff;color:var(--brand);border-color:#d8dffb;box-shadow:none}
+.small{min-height:43px;padding:0 16px;font-size:.92rem}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;color:var(--brand);font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:#70c9b4}
+.hero{padding:65px 0 95px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2.5rem,7vw,4.6rem);line-height:1.04;letter-spacing:-.055em;margin:14px 0 22px}
+h2{font-size:clamp(2rem,4vw,3.15rem);line-height:1.1;letter-spacing:-.045em;margin:13px 0 17px}
+h3{font-size:1.12rem;line-height:1.25;margin-bottom:9px}
+p{color:var(--muted)}
+.lead{max-width:620px;font-size:1.1rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}
+.preview{
+  min-height:410px;border-radius:32px;background:linear-gradient(145deg,#ecf1ff,#f7f9ff 72%);
+  position:relative;overflow:hidden;display:grid;place-items:center
+}
+.preview:before,.preview:after{content:"";position:absolute;border-radius:50%}
+.preview:before{width:240px;height:240px;right:-70px;top:-55px;background:#d6e0ff}
+.preview:after{width:160px;height:160px;left:-58px;bottom:-48px;background:#d9f6ee}
+.sheet{
+  position:relative;z-index:1;width:275px;min-height:335px;padding:25px;border-radius:12px;
+  background:#fff;box-shadow:0 22px 40px rgba(30,47,104,.2);transform:rotate(-3deg)
+}
+.sheet-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.sheet-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--soft);color:var(--brand);font-size:1.25rem}
+.sheet-tag{padding:7px 9px;border-radius:8px;background:var(--mint);color:#137a66;font-size:.7rem;font-weight:800}
+.sheet h3{font-size:1.35rem;margin-bottom:8px}
+.sheet p{font-size:.82rem}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.stat div{padding:10px;border-radius:10px;background:#f7f8fe}
+.stat strong{display:block;font-size:.85rem}.stat span{font-size:.68rem;color:#8490a8}
+.progress{height:8px;border-radius:99px;background:#e8ecf7;margin-top:18px;overflow:hidden}
+.progress i{display:block;width:68%;height:100%;background:#70c9b4;border-radius:99px}
+section{padding:100px 0}
+.soft-section{background:#fbfcff}
+.intro{max-width:680px;margin-bottom:34px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{padding:25px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+.icon{display:grid;place-items:center;width:48px;height:48px;margin-bottom:20px;border-radius:14px;background:var(--soft);color:var(--brand);font-size:1.35rem}
+.challenge{
+  padding:24px;border-radius:28px;background:var(--ink);color:#fff;overflow:hidden;position:relative
+}
+.challenge:after{content:"";position:absolute;width:310px;height:310px;right:-150px;top:-185px;border:50px solid rgba(113,143,255,.18);border-radius:50%}
+.challenge-inner{position:relative;z-index:1;max-width:760px}
+.challenge .eyebrow{color:#a9baff}
+.challenge p{color:#ccd5ed}
+.savings-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.savings-card{padding:16px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)}
+.savings-card strong{display:block;font-size:1.1rem}.savings-card span{font-size:.78rem;color:#b8c3df}
+.download-section{text-align:center}
+.download-box{padding:52px 22px;border-radius:28px;background:var(--mint)}
+.download-box p{max-width:600px;margin:0 auto 25px}
+footer{padding:38px 0 28px;border-top:1px solid var(--line);color:#738098;font-size:.88rem}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:17px}
+@media(max-width:800px){
+  .hero{padding:45px 0 70px}.hero-grid{grid-template-columns:1fr;gap:35px}
+  .feature-grid{grid-template-columns:1fr}.savings-grid{grid-template-columns:1fr 1fr}
+  section{padding:70px 0}.footer-row{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:480px){
+  .container{width:min(100% - 28px,1120px)}.savings-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="Smart Money Path home">
+      <span class="logo-mark">S</span>Smart Money Path
+    </a>
+    <a class="button small" href="#download">Download Tracker</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Free personal finance resource</span>
+      <h1>Take Control of Your Monthly Money</h1>
+      <p class="lead">Use the Monthly Finance Tracker to organize income, fixed bills, daily spending, savings goals, debt payments, and sinking funds in one simple system.</p>
+      <div class="actions">
+        <a class="button" href="Monthly_Finance___Bi-Weekly_Savings_Tracker.pdf" download>
+          Download Finance Tracker <span aria-hidden="true">↓</span>
+        </a>
+        <a class="button ghost" href="index.html">Back to Smart Money Path</a>
+      </div>
+      <p style="font-size:.86rem;color:#788399">Includes the monthly cash-flow tracker + 26-paycheck savings challenge.</p>
+    </div>
+
+    <div class="preview" aria-label="Finance tracker preview">
+      <div class="sheet">
+        <div class="sheet-top">
+          <div class="sheet-icon">▤</div>
+          <div class="sheet-tag">FINANCE TRACKER</div>
+        </div>
+        <h3>Monthly Finance Tracker</h3>
+        <p>Track your net income, bills, variable expenses, savings allocation and financial goals.</p>
+        <div class="stat">
+          <div><strong>$4,850</strong><span>Total net income</span></div>
+          <div><strong>$820</strong><span>Planned wealth goals</span></div>
+          <div><strong>$340</strong><span>Remaining buffer</span></div>
+          <div><strong>$1,000</strong><span>Savings challenge</span></div>
+        </div>
+        <div class="progress"><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft-section">
+  <div class="container">
+    <div class="intro">
+      <span class="eyebrow">What's inside</span>
+      <h2>One Simple System for Your Monthly Finances</h2>
+      <p>The tracker is built around practical cash-flow planning and clear categories so you can see where your money is going and what you are building toward.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="icon">↗</div>
+        <h3>Income Tracking</h3>
+        <p>Record paychecks, freelance income, bonuses, planned income, and actual deposits.</p>
+      </article>
+      <article class="feature">
+        <div class="icon">▤</div>
+        <h3>Bills & Expenses</h3>
+        <p>Track fixed obligations and compare target spending with actual variable living costs.</p>
+      </article>
+      <article class="feature">
+        <div class="icon">✦</div>
+        <h3>Savings & Goals</h3>
+        <p>Plan savings, debt payments, emergency reserves, and sinking funds in one place.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="challenge">
+      <div class="challenge-inner">
+        <span class="eyebrow">Included in the tracker</span>
+        <h2>Bi-Weekly $1,000 Savings Challenge</h2>
+        <p>Follow 26 scheduled paycheck deposits, check off each contribution, and work toward a total savings goal of $1,000.</p>
+        <div class="savings-grid">
+          <div class="savings-card"><strong>$130</strong><span>Deposit 7</span></div>
+          <div class="savings-card"><strong>$350</strong><span>Deposit 13</span></div>
+          <div class="savings-card"><strong>$655</strong><span>Deposit 20</span></div>
+          <div class="savings-card"><strong>$1,000</strong><span>Deposit 26</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download-section" id="download">
+  <div class="container">
+    <div class="download-box">
+      <span class="eyebrow">Your finance toolkit</span>
+      <h2>Ready to Get Your Money Organized?</h2>
+      <p>Download the Monthly Finance Tracker and start planning your income, expenses, savings, and financial goals.</p>
+      <a class="button" href="Monthly_Finance___Bi-Weekly_Savings_Tracker.pdf" download>
+        Download the PDF <span aria-hidden="true">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© 2026 Smart Money Path. All rights reserved.</div>
+    <div>
+      <a href="index.html">Home</a> ·
+      <a href="mailto:smartmoneypath007@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
